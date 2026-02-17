@@ -1,0 +1,8 @@
+[package]
+name = "ligero"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+k256 = "0.13.4"
+getrandom = { version = "0.2", features = ["js"] }

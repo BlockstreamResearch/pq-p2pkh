@@ -1,0 +1,18 @@
+[package]
+version = "0.1.0"
+name = "p2pkh-script"
+edition = "2021"
+
+[[bin]]
+name = "prover"
+path = "src/prover.rs"
+
+[[bin]]
+name = "verifier"
+path = "src/verifier.rs"
+
+[dependencies]
+sp1-sdk = "5.0.0"
+
+[build-dependencies]
+sp1-build = "5.0.0"

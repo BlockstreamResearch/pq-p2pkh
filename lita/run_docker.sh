@@ -1,0 +1,1 @@
+docker run --platform linux/arm64 -it --rm -v $(realpath .):/src ghcr.io/lita-xyz/llvm-valida-releases/valida-build-container:v0.10.0-arm64

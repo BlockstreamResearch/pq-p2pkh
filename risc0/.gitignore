@@ -1,0 +1,4 @@
+.DS_Store
+methods/guest/Cargo.lock
+target/
+proof.json

@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.runnables.extraEnv": {
+        "RISC0_FEATURE_bigint2": "1"
+    }
+}

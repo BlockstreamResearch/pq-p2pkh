@@ -1,0 +1,8 @@
+[package]
+version = "0.1.0"
+name = "p2pkh-program"
+edition = "2021"
+
+[dependencies]
+sp1-zkvm = "5.0.0"
+k256 = "0.13.4"
