@@ -27,7 +27,8 @@ pub fn main() {
         panic!("Signature verification failed");
     }
 
-    let _ = Sha256::digest(&PUBLIC_KEY);
+    let pubkey_hash = Sha256::digest(&PUBLIC_KEY);
+    assert!(!pubkey_hash.is_empty(), "Hash should not be empty");
 }
 
 pub fn verify_signature(msg_hash: &[u8], sig_bytes: &[u8], pk_bytes: &[u8]) -> bool {

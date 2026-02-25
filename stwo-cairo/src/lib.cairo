@@ -92,27 +92,15 @@ mod tests {
 
         let ecdsa_with_hints = Serde::<ECDSASignatureWithHint>::deserialize(ref ecdsa_sig_with_hints_serialized).unwrap();
 
-        let mut arbitrary_bytes: ByteArray = "";
-        arbitrary_bytes.append_word(0x01, 1);
-        arbitrary_bytes.append_word(0x02, 1);
-        arbitrary_bytes.append_word(0x03, 1);
-        arbitrary_bytes.append_word(0x04, 1);
-        arbitrary_bytes.append_word(0x05, 1);
-
-        let pq_addresses: Array<ByteArray> = array!["1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy"];
         let pk_x: u256 = 0xbed944b767b458553411f6c613f752476a6fbdd2c0837d48b7c187eb38e8e938;
         let pk_y: u256 = 0xdddf421ece6b5d6d7009d238e7eb4e42c5ffb6c5192e8864473d48eebbef9a6c;
-        let bitcoin_version_byte: u8 = 0x00;
 
-        let (_arbitrary_bytes_outputs, _pq_addresses_outputs, p2pkh_address) = address_registry_check(
-            arbitrary_bytes,
-            pq_addresses,
-            bitcoin_version_byte,
+        let part_address = address_registry_check(
             pk_x,
             pk_y,
             ecdsa_with_hints
         );
 
-        println!("P2PKH Address: {}", p2pkh_address);
+        println!("Part Address: {}", part_address);
     }
 }

@@ -4,15 +4,14 @@ This project benchmarks zero-knowledge proof generation and verification for Bit
 
 ## Prerequisites
 
-- Rust toolchain
-- [Cairo](https://www.cairo-lang.org/tutorial/getting-started-with-cairo/#installing-cairo)
+- Rust toolchain (with `wasm32-unknown-unknown` target)
 - [Ligero](https://github.com/ligeroinc/ligero-prover)
 
 ## Running the Benchmarks
 
 ### Build the program
 
-To build the STWO-CAIRO program, run:
+To build the Ligero program, run:
 
 ```bash
 cargo build --release --target wasm32-unknown-unknown

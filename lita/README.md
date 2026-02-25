@@ -11,7 +11,7 @@ This project benchmarks zero-knowledge proof generation and verification for Bit
 
 ### Build the program
 
-To build the STWO-CAIRO program, run:
+To build the Lita program, run:
 
 ```bash
 cargo +valida build --release
