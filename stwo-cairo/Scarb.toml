@@ -6,14 +6,16 @@ edition = "2024_07"
 # See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest.html
 
 [dependencies]
-cairo_execute = "2.11.4"
-garaga = { git = "https://github.com/keep-starknet-strange/garaga.git" }
+cairo_execute = "2.16.0"
+garaga = { path = "/Users/oleksandr.kurbatov/src/garaga" }
 
 [dev-dependencies]
-cairo_test = "2.11.4"
+cairo_test = "2.16.0"
 
 [executable]
 
 [cairo]
 enable-gas = false
 sierra-replace-ids = false
+skip-optimizations = true
+inlining-strategy = "avoid"
