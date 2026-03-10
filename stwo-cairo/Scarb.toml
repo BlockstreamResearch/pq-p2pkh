@@ -7,7 +7,7 @@ edition = "2024_07"
 
 [dependencies]
 cairo_execute = "2.16.0"
-garaga = { path = "/Users/oleksandr.kurbatov/src/garaga" }
+garaga = { path = "./src/garaga" }
 
 [dev-dependencies]
 cairo_test = "2.16.0"
