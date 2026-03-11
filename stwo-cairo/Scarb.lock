@@ -9,14 +9,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "corelib_imports"
-version = "0.1.2"
-source = "git+https://github.com/keep-starknet-strange/garaga.git#7064755bc1c587dcf4e2aada69b3763e6bd6a58d"
-
-[[package]]
 name = "garaga"
-version = "1.0.1"
-source = "git+https://github.com/keep-starknet-strange/garaga.git#7064755bc1c587dcf4e2aada69b3763e6bd6a58d"
-dependencies = [
- "corelib_imports",
-]
+version = "0.18.1"
+source = "git+https://github.com/keep-starknet-strange/garaga.git?rev=5c5859e6dc5515f542c310cb38a149602e774112#5c5859e6dc5515f542c310cb38a149602e774112"

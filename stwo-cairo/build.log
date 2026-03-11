@@ -1,0 +1,83 @@
+    Updating git repository https://github.com/keep-starknet-strange/garaga
+   Compiling cairo_tee_replacement v0.1.0 (/Users/oleksandr.kurbatov/mjthatch/pq-p2pkh/stwo-cairo/Scarb.toml)
+error[E0006]: Identifier not found.
+ --> /Users/oleksandr.kurbatov/mjthatch/pq-p2pkh/stwo-cairo/src/lib.cairo:5:13
+use garaga::signatures::ecdsa::{is_valid_ecdsa_signature, ECDSASignatureWithHint};
+            ^^^^^^^^^^
+
+error[E2311]: Trait has no implementation in context: core::serde::Serde::<<missing>>.
+ --> /Users/oleksandr.kurbatov/mjthatch/pq-p2pkh/stwo-cairo/src/lib.cairo:15:8
+    >::deserialize(ref ecdsa_sig_with_hints_serialized)
+       ^^^^^^^^^^^
+
+warn[E3004]: Unreachable clause.
+ --> /Users/oleksandr.kurbatov/mjthatch/pq-p2pkh/stwo-cairo/src/lib.cairo:34:5
+    assert!(is_valid_ecdsa_signature(sig, 2), "Signature verification failed");
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E2313]: Trait `core::serde::Serde::<core::circuit::u384>` has multiple implementations, in: `core::circuit::U384Serde`, `garaga::definitions::u384Serde`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/definitions.cairo:51:40
+#[derive(Copy, Drop, Debug, PartialEq, Serde)]
+                                       ^^^^^
+
+error[E2313]: Trait `core::serde::Serde::<core::circuit::u384>` has multiple implementations, in: `core::circuit::U384Serde`, `garaga::definitions::u384Serde`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/definitions.cairo:56:40
+#[derive(Copy, Drop, Debug, PartialEq, Serde)]
+                                       ^^^^^
+
+error[E2313]: Trait `core::serde::Serde::<core::circuit::u384>` has multiple implementations, in: `core::circuit::U384Serde`, `garaga::definitions::u384Serde`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/calldata.cairo:16:16
+#[derive(Drop, Serde)]
+               ^^^^^
+
+error[E0006]: Identifier not found.
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/drand.cairo:524:35
+    DivRemU96By32, DivRemU96By64, ConstValue, POW64, POW64_TYPED, NZ_POW64_TYPED, POW32,
+                                  ^^^^^^^^^^
+
+error[E2311]: Mismatched types. The type `core::zeroable::NonZero::<<missing>>` cannot be created from a numeric literal.
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/drand.cairo:531:52
+const NZ_POW80_TYPED: NonZero<ConstValue<POW80>> = 0x100000000000000000000;
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E2311]: Mismatched types. The type `core::zeroable::NonZero::<<missing>>` cannot be created from a numeric literal.
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/drand.cairo:533:52
+const NZ_POW16_TYPED: NonZero<ConstValue<POW16>> = 0x10000;
+                                                   ^^^^^^^
+
+error[E2311]: Mismatched types. The type `core::zeroable::NonZero::<<missing>>` cannot be created from a numeric literal.
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/drand.cairo:536:52
+const NZ_POW48_TYPED: NonZero<ConstValue<POW48>> = 0x1000000000000;
+                                                   ^^^^^^^^^^^^^^^
+
+error[E2313]: Trait `core::internal::bounded_int::DivRemHelper::<core::internal::bounded_int::BoundedInt::<0, 79228162514264337593543950335>, core::internal::bounded_int::BoundedInt::<18446744073709551616, 18446744073709551616>>` has multiple implementations, in: `core::circuit::conversions::DivRemU96By64`, `garaga::utils::drand::DivRemU96By80`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/drand.cairo:574:70
+    let (u32_h, u64_l): (DivRemU96By64::DivT, DivRemU96By64::RemT) = bounded_int_div_rem(
+                                                                     ^^^^^^^^^^^^^^^^^^^
+
+error[E2314]: Type annotations needed. Failed to infer ?1.
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/drand.cairo:623:70
+    let (u16_h, u80_l): (DivRemU96By80::DivT, DivRemU96By80::RemT) = bounded_int_div_rem(
+                                                                     ^^^^^^^^^^^^^^^^^^^
+
+error[E2313]: Trait `core::serde::Serde::<core::circuit::u384>` has multiple implementations, in: `core::circuit::U384Serde`, `garaga::definitions::u384Serde`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/utils/drand.cairo:102:16
+#[derive(Drop, Serde)]
+               ^^^^^
+
+error[E2313]: Trait `core::serde::Serde::<core::circuit::u384>` has multiple implementations, in: `core::circuit::U384Serde`, `garaga::definitions::u384Serde`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/ec_ops.cairo:211:40
+#[derive(Drop, Debug, Copy, PartialEq, Serde)]
+                                       ^^^^^
+
+error[E2313]: Trait `core::serde::Serde::<core::circuit::u384>` has multiple implementations, in: `core::circuit::U384Serde`, `garaga::definitions::u384Serde`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/ec_ops.cairo:283:34
+#[derive(Drop, Debug, PartialEq, Serde, Copy)]
+                                 ^^^^^
+
+error[E2313]: Trait `core::serde::Serde::<core::circuit::u384>` has multiple implementations, in: `core::circuit::U384Serde`, `garaga::definitions::u384Serde`
+ --> /Users/oleksandr.kurbatov/Library/Caches/com.swmansion.scarb/registry/git/checkouts/garaga-e3j1ur9j61a58/7c0993f/src/src/pairing_check.cairo:49:16
+#[derive(Drop, Serde)]
+               ^^^^^
+
+error: could not compile `cairo_tee_replacement` due to 15 previous errors and 1 warning

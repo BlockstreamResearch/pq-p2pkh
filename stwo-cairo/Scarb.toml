@@ -3,19 +3,15 @@ name = "cairo_tee_replacement"
 version = "0.1.0"
 edition = "2024_07"
 
-# See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest.html
-
 [dependencies]
-cairo_execute = "2.16.0"
-garaga = { git = "https://github.com/keep-starknet-strange/garaga.git"}
+cairo_execute = "2.14.0"
+garaga = { git = "https://github.com/keep-starknet-strange/garaga.git", rev = "5c5859e6dc5515f542c310cb38a149602e774112" }
 
 [dev-dependencies]
-cairo_test = "2.16.0"
+cairo_test = "2.14.0"
 
 [executable]
 
 [cairo]
 enable-gas = false
 sierra-replace-ids = false
-skip-optimizations = true
-inlining-strategy = "avoid"
